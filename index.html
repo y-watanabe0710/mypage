@@ -1,165 +1,138 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ja">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
-
-    <title>スパルタコーディングクラブ</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>のぼうの城 紹介サイト</title>
+    <!-- BootstrapのCSSリンク -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
-
-        * {
-            font-family: 'Gowun Dodum', sans-serif;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
-        .mytitle {
-            background-color: green;
-            color: white;
-            height: 250px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
 
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://img.freepik.com/free-vector/realistic-colorful-galaxy-background_23-2148965681.jpg");
-            background-position: center;
+        header {
+            background-image: url('https://images.prod.hjholdings.tv/d3urerHm/uploads/db140598-039e-4741-b312-853849eefe58.jpg?w=1600&h=600&p=t');
             background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
         }
 
-
-        .mytitle > button {
-            width: 250px;
-            height: 50px;
-
-            background-color: transparent;
-
-            border: 1px solid white;
-            color: white;
-
-            border-radius: 50px;
-
-            margin-top: 20px;
-
-        }
-
-        .mytitle > button {
-            border: 2px solid white;
-        }
-
-        .mycomment {
-            color: grey;
-        }
-
-        .mycards {
-            width: 1200px;
-            margin: 20px auto 20px auto;
-        }
-
-        .mypost {
-
-
-            width: 500px;
-            margin: 20px auto 20px auto;
-            padding: 20px 20px 20px 20px;
-
-            box-shadow: 0px 0px 3px 0px rgb(128, 128, 128);
-        }
-
-        .mybtn {
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
             display: flex;
-            flex-direction: row;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
-
-            margin-top: 20px;
         }
 
-        .mybtn > button {
-            margin-right: 10px;
+        img {
+            max-width: 100%;
         }
+
+        .custom-btn {
+            border: 1px solid grey; /* 枠の色を灰色に */
+            background-color: white; /* 背景色を白に */
+            color: grey; /* 文字色を灰色に */
+            text-decoration: none; /* テキストデコレーションの削除 */
+            padding: 10px 20px; /* パディングの追加 */
+            border-radius: 3px; /* ボーダーラジウスの追加 */
+            display: inline-block; /* インラインブロックの追加 */
+        }
+
+        .custom-btn:hover {
+            background-color: grey;
+            color: white;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1, header p {
+            color: transparent;
+        }
+
+
+.btn-container {
+    text-align: center; /* ボタンを中央寄せに */
+    margin-top: 20px; /* 上の要素との間隔をとるためのマージン */
+}
+
     </style>
 </head>
 
 <body>
-<div class=mytitle>
-    <h1>人生最高の映画</h1>
-    <button>映画記録</button>
-</div>
-<div class="mypost">
-    <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">映画URL</label>
-    </div>
-    <div class="form-floating">
-        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-        <label for="floatingTextarea">コメント</label>
-    </div>
-    <div class="mybtn">
-        <button type="button" class="btn btn-dark">記録</button>
-        <button type="button" class="btn btn-outline-dark">閉じる</button>
-    </div>
-</div>
-<div class="mycards">
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-        <div class="col">
-            <div class="card">
-                <img src="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
-                     class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">ここに映画のタイトルが入ります</h5>
-                    <p class="card-text">ここに映画の説明が入ります</p>
-                    <p>⭐⭐⭐</p>
-                    <P class="mycomment">ここにコメントが入ります </P>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <img src="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
-                     class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">ここに映画のタイトルが入ります</h5>
-                    <p class="card-text">ここに映画の説明が入ります</p>
-                    <p>⭐⭐⭐</p>
-                    <P class="mycomment">ここにコメントが入ります </P>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <img src="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
-                     class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">ここに映画のタイトルが入ります</h5>
-                    <p class="card-text">ここに映画の説明が入ります</p>
-                    <p>⭐⭐⭐</p>
-                    <P class="mycomment">ここにコメントが入ります </P>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <img src="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
-                     class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">ここに映画のタイトルが入ります</h5>
-                    <p class="card-text">ここに映画の説明が入ります</p>
-                    <p>⭐⭐⭐</p>
-                    <P class="mycomment">ここにコメントが入ります </P>
-                </div>
-            </div>
-        </div>
 
+<nav>
+    のぼうの城 紹介
+</nav>
+
+<header>
+    <h1>のぼうの城</h1>
+    <p>豊臣軍にケンカを売った、でくのぼうがいた。</p>
+</header>
+
+<section class="container">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+        <div style="flex: 1; margin-right: 30px;">
+            <img src="https://www.banger.jp/wp-content/uploads/2020/09/5a4f279f0e05702fce4d565ddd6e289b.jpg"
+                 alt="のぼうの城の画像">
+        </div>
+        <div style="flex: 2;">
+            <h3>映画の詳細</h3>
+            <p>
+                のぼう様（でくのぼうの意）”と領民から慕われる城代・成田長親は、天下統一を目指す豊臣秀吉方2万人の大軍を指揮した石田三成の水攻めに、わずか500人の兵で対抗する。
+            </p>
+
+            <div style="display: flex; justify-content: space-between;">
+                <div style="flex: 1; margin-right: 40px;">
+                    <h5>スタッフ</h5>
+                    <ul>
+                        <li>監督：犬童一心、樋口真嗣</li>
+                        <li>原作：和田竜</li>
+                    </ul>
+                </div>
+
+                <div style="flex: 1;">
+                    <h5>キャスト</h5>
+                    <ul>
+                        <li>成田長親　野村萬斎</li>
+                        <li>甲斐姫　　榮倉奈々</li>
+                        <li>石田三成　上地雄輔</li>
+                        <!-- その他のキャストを追加できる -->
+                    </ul>
+                </div>
+            </div>
+
+            <a href="https://www.youtube.com/watch?v=rQcYr8MzJSE" class="custom-btn" target="_blank">予告編を見る</a>
+
+
+        </div>
     </div>
-</div>
+</section>
+
+
+<footer>
+    2023 のぼうの城 紹介サイト
+</footer>
 
 </body>
 
-</html>\\
+</html>
